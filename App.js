@@ -8,6 +8,7 @@
 
 import React from 'react';
 import {Button, SafeAreaView} from 'react-native';
+import AlertModule from './Alert';
 import ToastModule from './Toast';
 
 const App = () => {
@@ -18,6 +19,12 @@ const App = () => {
         title="토스트 생성"
         onPress={() => {
           ToastModule.show('Hello World!', ToastModule.SHORT);
+        }}
+      />
+      <Button
+        title="Alert 생성"
+        onPress={() => {
+          AlertModule.alert('Hello World!');
         }}
       />
     </SafeAreaView>

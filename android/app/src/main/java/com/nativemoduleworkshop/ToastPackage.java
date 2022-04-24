@@ -21,6 +21,7 @@ public class ToastPackage  implements ReactPackage {
         return modules;
     }
 
+//    네이티브 ui 컴포넌트를 만들어 등록할 때 사용하는 메서드
     @NonNull
     @Override
     public List<ViewManager> createViewManagers(@NonNull ReactApplicationContext reactContext) {

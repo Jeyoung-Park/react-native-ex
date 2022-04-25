@@ -14,6 +14,10 @@
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		7699B88040F8A987B510C191 /* libPods-NativeModuleWorkshop-NativeModuleWorkshopTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-NativeModuleWorkshop-NativeModuleWorkshopTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		9664686B2816E8D900409449 /* BrightnessModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9664686A2816E8D900409449 /* BrightnessModule.swift */; };
+		9664686C2816E8D900409449 /* BrightnessModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9664686A2816E8D900409449 /* BrightnessModule.swift */; };
+		9664686E2816ED0600409449 /* BrightnessModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 9664686D2816ED0600409449 /* BrightnessModule.m */; };
+		9664686F2816ED0600409449 /* BrightnessModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 9664686D2816ED0600409449 /* BrightnessModule.m */; };
 		969814522815B535008EA7CB /* RCTAlertModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 969814512815B535008EA7CB /* RCTAlertModule.m */; };
 		969814532815B535008EA7CB /* RCTAlertModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 969814512815B535008EA7CB /* RCTAlertModule.m */; };
 /* End PBXBuildFile section */
@@ -45,6 +49,10 @@
 		5DCACB8F33CDC322A6C60F78 /* libPods-NativeModuleWorkshop.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NativeModuleWorkshop.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = NativeModuleWorkshop/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		89C6BE57DB24E9ADA2F236DE /* Pods-NativeModuleWorkshop-NativeModuleWorkshopTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NativeModuleWorkshop-NativeModuleWorkshopTests.release.xcconfig"; path = "Target Support Files/Pods-NativeModuleWorkshop-NativeModuleWorkshopTests/Pods-NativeModuleWorkshop-NativeModuleWorkshopTests.release.xcconfig"; sourceTree = "<group>"; };
+		966468682816E8D900409449 /* NativeModuleWorkshop-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NativeModuleWorkshop-Bridging-Header.h"; sourceTree = "<group>"; };
+		966468692816E8D900409449 /* NativeModuleWorkshopTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NativeModuleWorkshopTests-Bridging-Header.h"; sourceTree = "<group>"; };
+		9664686A2816E8D900409449 /* BrightnessModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrightnessModule.swift; sourceTree = "<group>"; };
+		9664686D2816ED0600409449 /* BrightnessModule.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BrightnessModule.m; sourceTree = "<group>"; };
 		969814502815B41D008EA7CB /* RCTAlertModule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RCTAlertModule.h; sourceTree = "<group>"; };
 		969814512815B535008EA7CB /* RCTAlertModule.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RCTAlertModule.m; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
@@ -98,6 +106,10 @@
 				13B07FB71A68108700A75B9A /* main.m */,
 				969814502815B41D008EA7CB /* RCTAlertModule.h */,
 				969814512815B535008EA7CB /* RCTAlertModule.m */,
+				9664686A2816E8D900409449 /* BrightnessModule.swift */,
+				966468682816E8D900409449 /* NativeModuleWorkshop-Bridging-Header.h */,
+				966468692816E8D900409449 /* NativeModuleWorkshopTests-Bridging-Header.h */,
+				9664686D2816ED0600409449 /* BrightnessModule.m */,
 			);
 			name = NativeModuleWorkshop;
 			sourceTree = "<group>";
@@ -208,10 +220,11 @@
 				TargetAttributes = {
 					00E356ED1AD99517003FC87E = {
 						CreatedOnToolsVersion = 6.2;
+						LastSwiftMigration = 1310;
 						TestTargetID = 13B07F861A680F5B00A75B9A;
 					};
 					13B07F861A680F5B00A75B9A = {
-						LastSwiftMigration = 1120;
+						LastSwiftMigration = 1310;
 					};
 				};
 			};
@@ -372,8 +385,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9664686F2816ED0600409449 /* BrightnessModule.m in Sources */,
 				969814532815B535008EA7CB /* RCTAlertModule.m in Sources */,
 				00E356F31AD99517003FC87E /* NativeModuleWorkshopTests.m in Sources */,
+				9664686C2816E8D900409449 /* BrightnessModule.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -381,7 +396,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9664686B2816E8D900409449 /* BrightnessModule.swift in Sources */,
 				13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */,
+				9664686E2816ED0600409449 /* BrightnessModule.m in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
 				969814522815B535008EA7CB /* RCTAlertModule.m in Sources */,
 			);
@@ -402,7 +419,9 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5B7EB9410499542E8C5724F5 /* Pods-NativeModuleWorkshop-NativeModuleWorkshopTests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -421,6 +440,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "NativeModuleWorkshopTests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NativeModuleWorkshop.app/NativeModuleWorkshop";
 			};
 			name = Debug;
@@ -429,7 +451,9 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 89C6BE57DB24E9ADA2F236DE /* Pods-NativeModuleWorkshop-NativeModuleWorkshopTests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				COPY_PHASE_STRIP = NO;
 				INFOPLIST_FILE = NativeModuleWorkshopTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
@@ -445,6 +469,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "NativeModuleWorkshopTests-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NativeModuleWorkshop.app/NativeModuleWorkshop";
 			};
 			name = Release;
@@ -469,6 +495,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = NativeModuleWorkshop;
+				SWIFT_OBJC_BRIDGING_HEADER = "NativeModuleWorkshop-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -494,6 +521,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = NativeModuleWorkshop;
+				SWIFT_OBJC_BRIDGING_HEADER = "NativeModuleWorkshop-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};

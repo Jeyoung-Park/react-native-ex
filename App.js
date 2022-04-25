@@ -5,7 +5,7 @@ import {getBrightness, setBrightness} from './Brightness';
 import ToastModule from './Toast';
 
 const App = () => {
-  const [value, setValue] = useState(0);
+  const [value, setValue] = useState(-1);
   const onPress = async () => {
     const brightness = await getBrightness();
     console.log('brightness, ', brightness);

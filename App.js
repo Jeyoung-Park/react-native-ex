@@ -1,14 +1,11 @@
-import React, {useEffect, useState} from 'react';
+import React, {useState} from 'react';
 import {Button, SafeAreaView, Text} from 'react-native';
-import AlertModule from './Alert';
 import {getBrightness, setBrightness} from './Brightness';
-import ToastModule from './Toast';
 
 const App = () => {
   const [value, setValue] = useState(-1);
   const onPress = async () => {
     const brightness = await getBrightness();
-    console.log('brightness, ', brightness);
     setValue(brightness);
   };
 

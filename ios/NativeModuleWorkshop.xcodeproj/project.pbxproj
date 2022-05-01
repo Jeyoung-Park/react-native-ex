@@ -18,6 +18,12 @@
 		9664686C2816E8D900409449 /* BrightnessModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9664686A2816E8D900409449 /* BrightnessModule.swift */; };
 		9664686E2816ED0600409449 /* BrightnessModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 9664686D2816ED0600409449 /* BrightnessModule.m */; };
 		9664686F2816ED0600409449 /* BrightnessModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 9664686D2816ED0600409449 /* BrightnessModule.m */; };
+		9672FD43281ECB3200F6628F /* CounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9672FD42281ECB3200F6628F /* CounterView.swift */; };
+		9672FD44281ECB3200F6628F /* CounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9672FD42281ECB3200F6628F /* CounterView.swift */; };
+		9672FD46281EDDC800F6628F /* CounterManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9672FD45281EDDC800F6628F /* CounterManager.swift */; };
+		9672FD47281EDDC800F6628F /* CounterManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9672FD45281EDDC800F6628F /* CounterManager.swift */; };
+		9672FD49281EE1A800F6628F /* CounterManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9672FD48281EE1A800F6628F /* CounterManager.m */; };
+		9672FD4A281EE1A800F6628F /* CounterManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9672FD48281EE1A800F6628F /* CounterManager.m */; };
 		969814522815B535008EA7CB /* RCTAlertModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 969814512815B535008EA7CB /* RCTAlertModule.m */; };
 		969814532815B535008EA7CB /* RCTAlertModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 969814512815B535008EA7CB /* RCTAlertModule.m */; };
 /* End PBXBuildFile section */
@@ -53,6 +59,9 @@
 		966468692816E8D900409449 /* NativeModuleWorkshopTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NativeModuleWorkshopTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		9664686A2816E8D900409449 /* BrightnessModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrightnessModule.swift; sourceTree = "<group>"; };
 		9664686D2816ED0600409449 /* BrightnessModule.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BrightnessModule.m; sourceTree = "<group>"; };
+		9672FD42281ECB3200F6628F /* CounterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterView.swift; sourceTree = "<group>"; };
+		9672FD45281EDDC800F6628F /* CounterManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterManager.swift; sourceTree = "<group>"; };
+		9672FD48281EE1A800F6628F /* CounterManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CounterManager.m; sourceTree = "<group>"; };
 		969814502815B41D008EA7CB /* RCTAlertModule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RCTAlertModule.h; sourceTree = "<group>"; };
 		969814512815B535008EA7CB /* RCTAlertModule.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RCTAlertModule.m; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
@@ -110,6 +119,9 @@
 				966468682816E8D900409449 /* NativeModuleWorkshop-Bridging-Header.h */,
 				966468692816E8D900409449 /* NativeModuleWorkshopTests-Bridging-Header.h */,
 				9664686D2816ED0600409449 /* BrightnessModule.m */,
+				9672FD42281ECB3200F6628F /* CounterView.swift */,
+				9672FD45281EDDC800F6628F /* CounterManager.swift */,
+				9672FD48281EE1A800F6628F /* CounterManager.m */,
 			);
 			name = NativeModuleWorkshop;
 			sourceTree = "<group>";
@@ -389,6 +401,9 @@
 				969814532815B535008EA7CB /* RCTAlertModule.m in Sources */,
 				00E356F31AD99517003FC87E /* NativeModuleWorkshopTests.m in Sources */,
 				9664686C2816E8D900409449 /* BrightnessModule.swift in Sources */,
+				9672FD4A281EE1A800F6628F /* CounterManager.m in Sources */,
+				9672FD47281EDDC800F6628F /* CounterManager.swift in Sources */,
+				9672FD44281ECB3200F6628F /* CounterView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -401,6 +416,9 @@
 				9664686E2816ED0600409449 /* BrightnessModule.m in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
 				969814522815B535008EA7CB /* RCTAlertModule.m in Sources */,
+				9672FD43281ECB3200F6628F /* CounterView.swift in Sources */,
+				9672FD49281EE1A800F6628F /* CounterManager.m in Sources */,
+				9672FD46281EDDC800F6628F /* CounterManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

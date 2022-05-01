@@ -26,7 +26,7 @@ class CounterView(val context: ReactContext):FrameLayout(context) {
         val eventEmitter = context.getJSModule(RCTEventEmitter::class.java)
         binding.button.setOnClickListener({
 //            receiveEvent: 이벤트 발생시키는 메서드
-            eventEmitter.receiveEvent(id, "pressLeftButton", null)
+            eventEmitter.receiveEvent(id,  "pressLeftButton", null)
         })
         binding.button2.setOnClickListener({
             eventEmitter.receiveEvent(id, "pressRightButton", null)

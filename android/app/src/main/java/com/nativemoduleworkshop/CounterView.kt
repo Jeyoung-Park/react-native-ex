@@ -1,12 +1,16 @@
 package com.nativemoduleworkshop
 
+import android.view.LayoutInflater
 import android.view.View
 import android.widget.FrameLayout
 import com.facebook.react.bridge.ReactContext
+import com.nativemoduleworkshop.databinding.CounterViewBinding
 
 class CounterView(val context: ReactContext):FrameLayout(context) {
+    private val binding: CounterViewBinding
     init{
-//        레이아웃을 불러와 화면에 그려
-        View.inflate(context, R.layout.counter_view, this)
+        val inflater = LayoutInflater.from(context)
+        binding = CounterViewBinding.inflate(inflater, this, true)
+        binding.button.text="+1"
     }
 }

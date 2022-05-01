@@ -1,5 +1,6 @@
 package com.nativemoduleworkshop
 
+import com.facebook.react.common.MapBuilder
 import com.facebook.react.uimanager.SimpleViewManager
 import com.facebook.react.uimanager.ThemedReactContext
 import com.facebook.react.uimanager.annotations.ReactProp
@@ -29,6 +30,19 @@ class CounterManager: SimpleViewManager<CounterView>() {
     @ReactProp(name = "value")
     fun setValue(view: CounterView, value: Int){
         view.setValue(value)
+    }
+
+    override fun getExportedCustomBubblingEventTypeConstants(): MutableMap<String, Any> {
+        val builder = MapBuilder.builder<String, Any>()
+        return builder
+            .put("pressLeftButton", MapBuilder.of(
+                "phasedRegistrationNames",
+                MapBuilder.of("bubbled", "onPressLeftButton")
+            ))
+            .put("pressRightButton", MapBuilder.of(
+                "phasedRegistrationNames",
+                MapBuilder.of("bubbled", "onPressRightButton")
+            )).build()
     }
 
     companion object{

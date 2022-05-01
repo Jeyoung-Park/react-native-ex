@@ -61,4 +61,16 @@ class CounterView: UIView {
     buttonsView.addArrangedSubview(leftButton)
     buttonsView.addArrangedSubview(rightButton)
   }
+  
+  @objc func setValue(_ val:NSNumber){
+    valueLabel.text = val.stringValue
+  }
+  
+  @objc func setLeftButtonText(_ val: NSString){
+    leftButton.setTitle(val as String, for: .normal)
+  }
+  
+  @objc func setRightButtonText(_ val: NSString){
+    rightButton.setTitle(val as String, for: .normal)
+  }
 }

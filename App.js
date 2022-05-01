@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import {Button, SafeAreaView, Text} from 'react-native';
-import {getBrightness, setBrightness} from './Brightness';
+import {getBrightness, setBrightness} from './src/modules/Brightness';
 
 const App = () => {
   const [value, setValue] = useState(-1);

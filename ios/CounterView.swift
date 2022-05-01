@@ -60,6 +60,8 @@ class CounterView: UIView {
     
     buttonsView.addArrangedSubview(leftButton)
     buttonsView.addArrangedSubview(rightButton)
+    
+    setUpEvents()
   }
   
   @objc func setValue(_ val:NSNumber){
@@ -72,5 +74,32 @@ class CounterView: UIView {
   
   @objc func setRightButtonText(_ val: NSString){
     rightButton.setTitle(val as String, for: .normal)
+  }
+  
+  @objc var onPressLeftButton: RCTDirectEventBlock?
+  @objc var onPressRightButton: RCTDirectEventBlock?
+  
+  @objc func pressLeftButton(sender: UIButton){
+    if(onPressLeftButton == nil){
+      return
+    }
+    let event = [AnyHashable: Any]()
+    onPressLeftButton!(event)
+  }
+  
+  @objc func pressRightButton(sender: UIButton){
+    if(onPressRightButton == nil){
+      return
+    }
+    let event = ["message": "hello world"]
+    onPressRightButton!(event)
+  }
+  
+  private func setUpEvents(){
+    let leftButtonTap = UITapGestureRecognizer(target: self, action: #selector(pressLeftButton))
+    leftButton.addGestureRecognizer(leftButtonTap)
+    
+    let rightButtonTap = UITapGestureRecognizer(target: self, action: #selector(pressRightButton))
+    rightButton.addGestureRecognizer(rightButtonTap)
   }
 }

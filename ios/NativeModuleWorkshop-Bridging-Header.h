@@ -4,3 +4,4 @@
 #import "React/RCTComponent.h"
 #import "React/RCTViewManager.h"
 #import "React/RCTDevLoadingView.h"
+#import "React/RCTEventEmitter.h"

@@ -1,31 +1,15 @@
-import React, {useState} from 'react';
-import {Button, SafeAreaView, Text} from 'react-native';
-import {getBrightness, setBrightness} from './src/modules/Brightness';
+import React from 'react';
+import {StyleSheet} from 'react-native';
+import Counter from './src/nativeUI/Counter';
 
 const App = () => {
-  const [value, setValue] = useState(-1);
-  const onPress = async () => {
-    const brightness = await getBrightness();
-    setValue(brightness);
-  };
-
-  const onPressLow = () => {
-    setBrightness(0.25);
-  };
-
-  const onPressHigh = () => {
-    setBrightness(1);
-  };
-
-  return (
-    <SafeAreaView
-      style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
-      <Text>밝기:{value}</Text>
-      <Button title="값 갱신" onPress={onPress} />
-      <Button title=".25" onPress={onPressLow} />
-      <Button title="1" onPress={onPressHigh} />
-    </SafeAreaView>
-  );
+  return <Counter style={styles.block} />;
 };
+
+const styles = StyleSheet.create({
+  block: {
+    flex: 1,
+  },
+});
 
 export default App;

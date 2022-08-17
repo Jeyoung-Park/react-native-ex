@@ -44,4 +44,20 @@ module.exports = createCoreController("api::article.article", ({ strapi }) => ({
     // 응답 반환
     return sanitizeEntity(entity, { model: strapi.models.article });
   },
+
+  async delete(ctx) {
+    const { id } = ctx.params;
+    const article = await strapi.services.article.findOne({ id });
+
+    if (!article) {
+      return ctx.throw(404);
+    }
+
+    if (ctx.state.user.id !== article.user.id) {
+      return ctx.unauthorized("You cannot remove this entry");
+    }
+
+    //  응답 반환
+    ctx.status = 204;
+  },
 }));

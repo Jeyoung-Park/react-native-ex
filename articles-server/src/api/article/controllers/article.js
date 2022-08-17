@@ -5,14 +5,15 @@ module.exports = createCoreController("api::article.article", ({ strapi }) => ({
     // 사용자의 id를 데이터에 추가
     ctx.request.body.user = ctx.state.user.id;
     // article 데이터 생성
-    const entity = await strapi.services.article.create(ctx.request.body);
+    const response = await super.create(ctx);
     // 잘못된 필드 및 private 값 제외하고 반환
-    return sanitizeEntity(entity, { model: strapi.modeles.article });
+    return response;
   },
 
   async update(ctx) {
+    console.log("ctx, ", ctx.req);
     const { id } = ctx.params;
-    const article = await strapi.services.article.findOne({ id });
+    const article = await super.findOne({ id });
 
     // article이 존재하지 않을 때 404
     if (!article) {
@@ -30,18 +31,15 @@ module.exports = createCoreController("api::article.article", ({ strapi }) => ({
     }
 
     // article update
-    const entity = await strapi.services.article.update(
-      { id },
-      ctx.request.body
-    );
+    const response = await super.update({ id }, ctx);
 
     // 응답 반환
-    return sanitizeEntity(entity, { model: strapi.models.article });
+    return response;
   },
 
   async delete(ctx) {
     const { id } = ctx.params;
-    const article = await strapi.services.article.findOne({ id });
+    const article = await super.findOne({ id });
 
     if (!article) {
       return ctx.throw(404);

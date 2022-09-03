@@ -5,11 +5,12 @@ module.exports = createCoreController("api::article.article", ({ strapi }) => ({
     // 사용자의 id를 데이터에 추가
     ctx.request.body.data = {
       ...ctx.request.body.data,
-      user: { id: ctx.state.user.id },
+      users: ctx.state.user.id,
     };
-    console.log("ctx, ", ctx.request.body);
+    console.log("body, ", ctx.request.body);
     // article 데이터 생성
     const response = await super.create(ctx);
+    console.log("res, ", response);
     // 잘못된 필드 및 private 값 제외하고 반환
     return response;
   },
@@ -61,5 +62,18 @@ module.exports = createCoreController("api::article.article", ({ strapi }) => ({
 
     //  응답 반환
     ctx.status = 204;
+  },
+
+  async find(ctx) {
+    // some custom logic here
+    ctx.query = { ...ctx.query, local: "en" };
+
+    // Calling the default core action
+    const { data, meta } = await super.find(ctx);
+
+    // some more custom logic
+    meta.date = Date.now();
+
+    return { data, meta };
   },
 }));
